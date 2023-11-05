@@ -403,7 +403,9 @@ public class AppWindow : Adw.ApplicationWindow
 
             /* Default filename to use when saving document. */
             /* To that filename the extension will be added, eg. "Scanned Document.pdf" */
-            save_dialog.initial_name = (_("Scanned Document") + "." + mime_type_to_extension (save_format));
+	
+	    var now = new DateTime.now_local ();
+            save_dialog.initial_name = (_(now.format ("%x")) + "." + mime_type_to_extension (save_format));
         }
         
         var filters = new ListStore (typeof (Gtk.FileFilter));
