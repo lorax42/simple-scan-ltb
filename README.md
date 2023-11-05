@@ -123,3 +123,5 @@ For example to run Document Scanner in Polish language:
 ```
 $ LANGUAGE=pl XDG_DATA_DIRS=_install/share:$XDG_DATA_DIRS ./_install/bin/simple-scan
 ```
+# My Changes
+none yet
