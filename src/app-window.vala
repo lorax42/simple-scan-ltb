@@ -405,7 +405,7 @@ public class AppWindow : Adw.ApplicationWindow
             /* To that filename the extension will be added, eg. "Scanned Document.pdf" */
 	
 	    var now = new DateTime.now_local ();
-            save_dialog.initial_name = (_(now.format ("%d-%m-%Y")) + "." + mime_type_to_extension (save_format));
+            save_dialog.initial_name = (_(now.format ("%Y-%m-%d")) + "." + mime_type_to_extension (save_format));
         }
         
         var filters = new ListStore (typeof (Gtk.FileFilter));
